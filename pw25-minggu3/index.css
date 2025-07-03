@@ -1,0 +1,152 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.25;
+    padding: 40px 20px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border: 1px solid green;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: 0.25em 0 0.75em;
+}
+
+table thead {
+    background-color: green;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+table th,
+table td {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85em;
+}
+
+table tr {
+    background-color: RED;
+    border: 1px solid green;
+    color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    table {
+        border: none;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table tr {
+        display: block;
+        margin-bottom: 12px;
+        border-bottom: 3px solid green;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        font-size: 0.8em;
+        border-bottom: 1px solid green;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+table td img {
+    display: block;
+    margin: auto;
+}
+
+
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+}
+
+.form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* RESPONSIF FORMULIR */
+@media screen and (max-width: 600px) {
+    .form-wrapper {
+        flex-direction: column;
+    }
+
+    .form-group {
+        max-width: 100%;
+    }
+}
